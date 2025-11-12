@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMTP Email Demonstration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>📧 SMTP Email Demonstration</h1>
+            <p class="subtitle">Semester Project - Email Sending using SMTP Protocol</p>
+            
+            <form id="emailForm">
+                <div class="form-group">
+                    <label for="recipientEmail">Recipient Email Address:</label>
+                    <input 
+                        type="email" 
+                        id="recipientEmail" 
+                        name="recipientEmail" 
+                        placeholder="example@email.com"
+                        required
+                    >
+                </div>
+                
+                <button type="submit" id="sendButton" class="send-btn">
+                    <span id="buttonText">Send Email</span>
+                    <span id="buttonLoader" class="loader" style="display: none;"></span>
+                </button>
+            </form>
+            
+            <div id="successNotification" class="notification success" style="display: none;">
+                <span class="notification-icon">✅</span>
+                <span class="notification-message">Email has been successfully sent!</span>
+            </div>
+            
+            <div id="errorNotification" class="notification error" style="display: none;">
+                <span class="notification-icon">❌</span>
+                <span class="notification-message" id="errorMessage"></span>
+            </div>
+            
+            <div class="info-section">
+                <h3>About SMTP Protocol</h3>
+                <p>SMTP (Simple Mail Transfer Protocol) is a communication protocol used for sending email messages between servers. This demonstration shows how emails are sent using SMTP protocol through a Node.js backend server.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
